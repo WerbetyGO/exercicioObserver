@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Player de Música</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="coverElement">
+            <img id="coverDisplay" alt="Capa do Álbum">
+        </div>
+        <div>
+            <label for="songSelect">Escolha uma música:</label>
+            <select id="songSelect">
+                <option value="musicas/goblins.mp3" data-cover="capa/goblim.jpg">Goblins</option>
+                <option value="musicas/starwars.mp3" data-cover="capa/starwars.jpg">Star Wars</option>
+                <option value="musicas/rock.mp3" data-cover="capa/rock.jpg">Rock</option>
+                <option value="musicas/forro.mp3" data-cover="capa/forro.jpg">Forró</option>
+                <option value="musicas/solo.mp3" data-cover="capa/solo.jpg">Solo</option>
+            </select>
+        </div>
+        <div id="musicDisplay">Música atual: Nenhuma</div>
+        <div id="controls">
+            <button id="playButton">Tocar Música</button>
+            <button id="stopButton">Parar Música</button>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+            <span id="volumeValue">Volume: 100%</span>
+        </div>
+        <div id="timeDisplay">00:00 / 00:00</div>
+        <input type="range" id="progressBar" min="0" max="100" value="0">
+    </div>
+
+    <script src="musicPlayer.js"></script>
+</body>
+</html>
